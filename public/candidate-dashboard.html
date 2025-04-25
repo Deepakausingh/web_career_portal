@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f5f7fa;
+      display: flex;
+    }
+
+    .sidebar {
+      width: 250px;
+      background-color: #2f3542;
+      height: 100vh;
+      padding: 20px;
+      color: #fff;
+    }
+
+    .sidebar h2 {
+      font-size: 24px;
+      margin-bottom: 40px;
+    }
+
+    .sidebar a {
+      display: block;
+      color: #ccc;
+      text-decoration: none;
+      margin-bottom: 15px;
+      padding: 10px;
+      border-radius: 6px;
+    }
+
+    .sidebar a:hover {
+      background-color: #57606f;
+      color: #fff;
+    }
+
+    .main {
+      flex: 1;
+      padding: 30px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .topbar h1 {
+      font-size: 28px;
+    }
+
+    .profile {
+      display: flex;
+      align-items: center;
+    }
+
+    .profile img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 10px;
+    }
+
+    .profile-info {
+      font-size: 16px;
+    }
+
+    .dashboard-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    .logout {
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sidebar">
+    <h2>Student Panel</h2>
+    <a href="#">🏠 Dashboard</a>
+    <a href="#">📄 My Applications</a>
+    <a href="#">📅 Seminars</a>
+    <a href="edit-profile.html">📝 Edit Profile</a>
+    <a href="#" class="logout">🚪 Logout</a>
+  </div>
+
+  <div class="main">
+    <div class="topbar">
+      <h1>Welcome, John Doe</h1>
+      <div class="profile">
+        <img src="https://i.pravatar.cc/100" alt="Profile">
+        <div class="profile-info">
+          <strong>John Doe</strong><br>
+          Candidate
+        </div>
+      </div>
+    </div>
+
+    <div class="dashboard-cards">
+      <div class="card">
+        <h3>Upcoming Seminars</h3>
+        <p>AI in 2025 – April 30, 2025</p>
+        <p>Career Workshop – May 5, 2025</p>
+      </div>
+
+      <div class="card">
+        <h3>Applied Jobs</h3>
+        <p>Software Engineer at TCS</p>
+        <p>Frontend Intern at Infosys</p>
+      </div>
+
+      <div class="card">
+        <h3>Profile Strength</h3>
+        <p>75% complete</p>
+        <progress value="75" max="100" style="width: 100%;"></progress>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

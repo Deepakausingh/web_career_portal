@@ -1,0 +1,222 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: black;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .navbar {
+    background: #1a1a2e;
+    padding: 1rem 0;
+    color: white;
+  }
+  
+  .logo {
+    float: left;
+  }
+  
+  .nav-links {
+    list-style: none;
+    float: right;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .hero {
+    background: url('../images/hero-bg.jpg') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+  }
+  
+  .hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .search-form input {
+    padding: 10px;
+    margin: 5px;
+    width: 200px;
+  }
+  
+  .search-form button {
+    padding: 10px 20px;
+    background: #0077ff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .categories {
+    padding: 60px 0;
+    background: #fff;
+    text-align: center;
+  }
+  
+  .category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+  }
+  
+  .category-card {
+    background: #e3e3e3;
+    padding: 20px;
+    border-radius: 8px;
+    transition: 0.3s ease;
+  }
+  
+  .category-card:hover {
+    background: #0077ff;
+    color: white;
+  }
+  
+  .footer {
+    background: #1a1a2e;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+  }
+  
+
+  .form-section {
+    padding: 80px 0;
+    background: #fff;
+  }
+  
+  .form-box {
+    max-width: 400px;
+    margin: auto;
+    background: #f4f4f4;
+    padding: 30px;
+    border-radius: 10px;
+  }
+  
+  .form-box input,
+  .form-box select {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .form-box button {
+    width: 100%;
+    padding: 10px;
+    background: #0077ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .jobs-section {
+    padding: 60px 0;
+    background: #f9f9f9;
+  }
+  
+  .job-listing {
+    display: grid;
+    gap: 20px;
+  }
+  
+  .job-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  .job-detail-section {
+    padding: 60px 0;
+    background: #fff;
+  }
+  
+  .job-header {
+    background: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .job-description {
+    margin-top: 30px;
+  }
+  
+  .job-description h3 {
+    margin-top: 20px;
+    color: #333;
+  }
+  
+  .job-description ul {
+    padding-left: 20px;
+  }
+  
+  .apply-btn {
+    margin-top: 30px;
+  }
+  
+  .apply-btn .btn {
+    padding: 12px 25px;
+    background-color: #0077ff;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .seminars-section {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+  }
+  
+  .seminars-section h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #333;
+  }
+  
+  .seminar-card {
+    background-color: #fff;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  }
+  
+  .seminar-card h3 {
+    color: #0077ff;
+    margin-bottom: 10px;
+  }
+  
+  .seminar-card p {
+    margin: 6px 0;
+  }
+  
+  .seminar-card .btn {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: #0077ff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  

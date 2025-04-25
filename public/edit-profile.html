@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit Profile</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f6f9;
+      padding: 30px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      margin-top: 0;
+      text-align: center;
+      color: #333;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-bottom: 6px;
+      color: #333;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="file"],
+    select,
+    textarea {
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    .profile-pic {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .profile-pic img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid #ccc;
+    }
+
+    .submit-btn {
+      padding: 12px;
+      background-color: #007bff;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    .submit-btn:hover {
+      background-color: #0056b3;
+    }
+
+    @media (max-width: 600px) {
+      .profile-pic {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Edit Your Profile</h2>
+    <form id="editProfileForm" action="/api/user/update-profile" method="POST" enctype="multipart/form-data">
+      
+      <div class="profile-pic">
+        <img src="https://i.pravatar.cc/100" alt="Profile Picture" id="preview">
+        <div class="form-group">
+          <label for="profilePhoto">Change Profile Photo</label>
+          <input type="file" name="profilePhoto" id="profilePhoto" accept="image/*" onchange="previewPhoto(event)">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="fullName">Full Name</label>
+        <input type="text" name="fullName" id="fullName" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" name="email" id="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" name="phone" id="phone">
+      </div>
+
+      <div class="form-group">
+        <label for="college">College Name</label>
+        <input type="text" name="college" id="college">
+      </div>
+
+      <div class="form-group">
+        <label for="rollNumber">College Roll Number</label>
+        <input type="text" name="rollNumber" id="rollNumber">
+      </div>
+
+      <div class="form-group">
+        <label for="course">Course/Branch</label>
+        <input type="text" name="course" id="course">
+      </div>
+
+      <div class="form-group">
+        <label for="year">Year of Study</label>
+        <select name="year" id="year">
+          <option value="1st Year">1st Year</option>
+          <option value="2nd Year">2nd Year</option>
+          <option value="3rd Year">3rd Year</option>
+          <option value="4th Year">4th Year</option>
+          <option value="Passed Out">Passed Out</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="skills">Skills</label>
+        <textarea name="skills" id="skills" placeholder="E.g., JavaScript, Python, React, SQL..."></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="about">About You</label>
+        <textarea name="about" id="about" placeholder="Write a brief about yourself..."></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">Update Profile</button>
+    </form>
+  </div>
+
+  <script>
+    function previewPhoto(event) {
+      const img = document.getElementById("preview");
+      img.src = URL.createObjectURL(event.target.files[0]);
+    }
+  </script>
+
+</body>
+</html>
